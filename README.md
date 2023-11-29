@@ -17,7 +17,7 @@ REST API implementation for a basic social network.
 
 ## Introduction
 
-[Ongoing unfinished project - the current version is for demonstration purposes only]
+[Ongoing unfinished project - this is a development version]
 
 This project simulates a REST API implementation for a simple social network. This project is based on the [freeCodeCamp's Python API Development course](https://www.freecodecamp.org/news/creating-apis-with-python-free-19-hour-course/), and its purpose is to become acquainted with a series of concepts and tools such as:
 
@@ -28,7 +28,6 @@ This project simulates a REST API implementation for a simple social network. Th
 - CI integration with GitHUb actions (and Jenkins).
 - App deployment with Heroku.
 - Containerization with Docker.
-
 
 
 ## Features
@@ -65,10 +64,10 @@ The database schema, `social_network`, has currently, the following tables:
 - `group_members`
 
 The data for these tables has been generated through multiples sources: 
-- List of posts (`title`) taken from the Data Science Stack Exchange database.
-- Random processes, e.g. post upvotes.
+- List of posts (`title`) taken from the [Data Science Stack Exchange database](https://data.stackexchange.com/stackoverflow/query/new).
+- Pseudo-random processes, e.g. voting users and post upvotes.
 - Users names via [randomwordgenerator](https://randomwordgenerator.com/name.php)
-- Social groups information generated via ChatGPT.
+- Social groups information generated via ChatGPT (`title` and `details`).
 
 ![erd_social_network](/img/social_network_erd.png)
 
@@ -114,6 +113,8 @@ Alternative, import just he database schema without data, using Alembic:
     $ cd version_12
     $ alembic upgrade head
 
+The database tables can be imported one by one using the backups in the 'data_sets' folder.
+
 ### Configuration
 
 #### Setting the environment variables
@@ -137,32 +138,37 @@ For authorization token creation:
 
 ## Usage
 
+Note: the original (unhashed) passwords and usernames (emails) that are used as credentials to login as a user can be found in '/data_sets/user_credentials.csv'.
+
 Examples of HTTP requests endpoints and purposes:
 
-- Create/post a user's session: "localhost:[port]/login"
+- Create/post a user's session: "localhost:8000/login"
 
-- Get user information by user ID; e.g. get user 1 : "localhost:[port]/users/id/1"
-- Get user information by user name; e.g. get user Kim Kent : "localhost:[port]/users/name/kim_kent"
+- Get user information by user via
+    - ID, e.g. get user with ID 1 : "localhost:8000/users/id/1"
+- Name, e.g. get user Kim Kent : "localhost:8000/users/name/kim_kent"
+- Replace users info with a PUT request: "localhost:8000/users/id/1"
 - Delete user via, e.g.:
-    - ID: "localhost:[port]/users/id/1"
-    - Name:  "localhost:[port]/users/name/kim_kent"
+    - ID: "localhost:8000/users/id/1"
+    - Name:  "localhost:8000/users/name/kim_kent"
 
-- Get users posts: "localhost:[port]/posts/my_posts"
-- Get any post by its ID; e.g. get post 1: "localhost:[port]/posts/1"
-- Post a post: "localhost:[port]/posts"
+- Get users posts: "localhost:8000/posts/my_posts"
+- Get any post by its ID; e.g. get post 1: "localhost:8000/posts/1"
+- Update a user's post with a PATCH request: "localhost:8000/posts/1"
+- Post a post: "localhost:8000/posts"
 
 
-- Get user's social groups that he/she is member or admin of:  "localhost:[port]/social_groups/my_social_groups"
-- Create/post a social group (only for logged in users): "localhost:[port]/social_groups"
+- Get user's social groups that he/she is a member or admin of:  "localhost:8000/social_groups/my_social_groups"
+- Create/post a social group (only for logged in users): "localhost:8000/social_groups"
 
-- Post a upvote or a downvote: "localhost:[port]/votes"
+- Post an upvote or a downvote: "localhost:8000/votes"
 
 ## API Documentation
 
 Fast API / OpenAPI generates two different interactive API documentation UI versions that can be accessed via the following end points (change port according to the one set in the .env file): 
 
-- Swagger UI: `localhost:[port]/docs`
-- ReDoc UI: `localhost:[port]/redoc`
+- Swagger UI: `localhost:8000/docs`
+- ReDoc UI: `localhost:8000/redoc`
 
 ## License
 
