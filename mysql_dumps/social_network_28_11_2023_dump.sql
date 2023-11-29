@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.35, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.35, for Linux (x864)
 --
 -- Host: localhost    Database: social_network
 -- ------------------------------------------------------
@@ -53,9 +53,9 @@ CREATE TABLE `group_members` (
   `admin` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`member_id`,`user_id`,`group_id`),
   UNIQUE KEY `member_id` (`user_id`,`group_id`),
-  KEY `group_members_social_groups_fk_6_idx` (`group_id`),
-  CONSTRAINT `group_members_social_groups_fk_6` FOREIGN KEY (`group_id`) REFERENCES `social_groups` (`group_id`) ON DELETE CASCADE,
-  CONSTRAINT `group_members_users_fk_6` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
+  KEY `group_members_social_groups_fk_idx` (`group_id`),
+  CONSTRAINT `group_members_social_groups_fk` FOREIGN KEY (`group_id`) REFERENCES `social_groups` (`group_id`) ON DELETE CASCADE,
+  CONSTRAINT `group_members_users_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=332 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -86,8 +86,8 @@ CREATE TABLE `posts` (
   `user_id` int NOT NULL,
   PRIMARY KEY (`post_id`),
   UNIQUE KEY `post_id` (`post_id`),
-  KEY `posts_users_fk_6` (`user_id`),
-  CONSTRAINT `posts_users_fk_6` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
+  KEY `posts_users_fk` (`user_id`),
+  CONSTRAINT `posts_users_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=220 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -118,8 +118,8 @@ CREATE TABLE `social_groups` (
   PRIMARY KEY (`group_id`,`admin_id`),
   UNIQUE KEY `group_id_UNIQUE` (`group_id`),
   UNIQUE KEY `title_UNIQUE` (`title`),
-  KEY `social_groups_users_fk_6_idx` (`admin_id`),
-  CONSTRAINT `social_groups_users_fk_6` FOREIGN KEY (`admin_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
+  KEY `social_groups_users_fk_idx` (`admin_id`),
+  CONSTRAINT `social_groups_users_fk` FOREIGN KEY (`admin_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -180,10 +180,10 @@ CREATE TABLE `votes` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`vote_id`,`post_id`,`user_id`),
   UNIQUE KEY `vote_id` (`vote_id`),
-  KEY `votes_posts_fk_6` (`post_id`),
-  KEY `votes_users_fk_6` (`user_id`),
-  CONSTRAINT `votes_posts_fk_6` FOREIGN KEY (`post_id`) REFERENCES `posts` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `votes_users_fk_6` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `votes_posts_fk` (`post_id`),
+  KEY `votes_users_fk` (`user_id`),
+  CONSTRAINT `votes_posts_fk` FOREIGN KEY (`post_id`) REFERENCES `posts` (`post_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `votes_users_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=428 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

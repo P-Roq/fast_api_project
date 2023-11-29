@@ -74,7 +74,6 @@ The data for these tables has been generated through multiples sources:
 
 ## Getting Started
 
-[]
 
 ### Prerequisites
 
@@ -88,8 +87,9 @@ Support platforms for the project:
 ### Installation
 
 - Generate a virtual environment and install requirements with poetry (Linux):
-    - $ `cd [projects_directory]`
-    - $ `poetry install`
+    
+        cd [project_directory]
+        poetry install
 
 - Install MySQL
 
@@ -101,6 +101,18 @@ Support platforms for the project:
     - Username
     - Password
     - Default Schema
+
+Importing the database:
+- Create an empty schema (or use the default schema) in to fill it SQL dump.
+
+- Run the following command (inside the main project folder)
+    
+        $ mysql -u [Username] -p [Schema] < mysql_dumps/social_network_28_11_2023_dump.sql
+
+Alternative, import just he database schema without data, using Alembic:
+
+    $ cd version_12
+    $ alembic upgrade head
 
 ### Configuration
 
@@ -127,30 +139,30 @@ For authorization token creation:
 
 Examples of HTTP requests endpoints and purposes:
 
-- Create/post a user's session: "localhost:8000/login"
+- Create/post a user's session: "localhost:[port]/login"
 
-- Get user information by user ID; e.g. get user 1 : "localhost:8000/users/id/1"
-- Get user information by user name; e.g. get user Kim Kent : "localhost:8000/users/name/kim_kent"
+- Get user information by user ID; e.g. get user 1 : "localhost:[port]/users/id/1"
+- Get user information by user name; e.g. get user Kim Kent : "localhost:[port]/users/name/kim_kent"
 - Delete user via, e.g.:
-    - ID: "localhost:8000/users/id/1"
-    - Name:  "localhost:8000/users/name/kim_kent"
+    - ID: "localhost:[port]/users/id/1"
+    - Name:  "localhost:[port]/users/name/kim_kent"
 
-- Get users posts: "localhost:8000/posts/my_posts"
-- Get any post by its ID; e.g. get post 1: "localhost:8000/posts/1"
-- Post a post: "localhost:8000/posts"
+- Get users posts: "localhost:[port]/posts/my_posts"
+- Get any post by its ID; e.g. get post 1: "localhost:[port]/posts/1"
+- Post a post: "localhost:[port]/posts"
 
 
-- Get user's social groups that he/she is member or admin of:  "localhost:8000/social_groups/my_social_groups"
-- Create/post a social group (only for logged in users): "localhost:8000/social_groups"
+- Get user's social groups that he/she is member or admin of:  "localhost:[port]/social_groups/my_social_groups"
+- Create/post a social group (only for logged in users): "localhost:[port]/social_groups"
 
-- Post a upvote or a downvote: "localhost:8000/votes"
+- Post a upvote or a downvote: "localhost:[port]/votes"
 
 ## API Documentation
 
 Fast API / OpenAPI generates two different interactive API documentation UI versions that can be accessed via the following end points (change port according to the one set in the .env file): 
 
-    - Swagger UI: `localhost:8000/docs`
-    - ReDoc UI: `localhost:8000/redoc`
+- Swagger UI: `localhost:[port]/docs`
+- ReDoc UI: `localhost:[port]/redoc`
 
 ## License
 
