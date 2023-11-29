@@ -53,7 +53,7 @@ def check_uniqueness(unique: bool, unique_values: list, value: Any, msg: str,) -
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail=msg,
-                )#f'{field} not accepted.'
+                )
     
     if unique == False:
         if value not in unique_values:

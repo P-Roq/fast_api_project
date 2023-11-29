@@ -3,15 +3,13 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, Response, status
 from src.oauth2 import get_current_user
 from src.group_members.models_group_members import (
-    GetGroupMember,
-    GetGroupMemberShort,
+    GetGroupMemberShort_1,
+    GetGroupMemberShort_2,
     )
 from src.database.db_setup import SessionLocal, get_db
 from src.database.db_models import (
     Session,
-    DBSession,
-    GroupMembers,
-    Users,
+    DBSessionGroupMembers,
     )
 from src.database.http_exceptions import (
     check_resource_availability,
@@ -22,63 +20,43 @@ from src.database.http_exceptions import (
 
 router = APIRouter()
 
-@router.get(
-    "/{group_id}",
-    response_model=List[GetGroupMemberShort],
-    )
-def get_group_members(
+@router.get("/{group_id}", response_model=List[GetGroupMemberShort_2],)
+def get_all_members_by_group(
     group_id: int,
     db: Session = Depends(get_db),
-    credentials_user: int = Depends(get_current_user),
+    limit: Optional[int] = None,
+    skip: Optional[int] = None,
+    search: Optional[str] = "",
     ):
 
-    db_session = DBSession(db, GroupMembers)
+    db_session = DBSessionGroupMembers(db)
 
-    user_resources = db_session.fetch_grouped_resources(
-        id_column='group_id',
-        id=group_id,
-        )
+    members_by_group = db_session.get_all_members_by_group('group_id', group_id)
+
+    check_object_availability(members_by_group, 'No posts were found.', 404)
     
-    check_object_availability(user_resources, 'No posts were found.', 404)
-    
-    return user_resources
+    return members_by_group
 
 
-@router.get("/{group_id}/member/{user_id}", response_model=GetGroupMember,)
+@router.get("/{group_id}/{user_id}", response_model=GetGroupMemberShort_2,)
 def get_group_member(
     group_id: int,
     user_id: int,
     db: Session = Depends(get_db),
     ):
-
-    # Membership info:
-    db_session_members = DBSession(db, GroupMembers)
     
-    resource_members = db_session_members.fetch_resource({'group_id': group_id, 'user_id': user_id}, False)
-    
-    check_object_availability(resource_members, f'Member {user_id} not found in social group {group_id}.', 404)
+    db_session = DBSessionGroupMembers(db)
 
-    # Member info.
-    db_session_users = DBSession(db, Users)
-    
-    resource_user = db_session_users.fetch_resource({'user_id': user_id}, False)
+    members_by_group = db_session.get_all_members_by_group('group_id', group_id)
 
-    resource = {
-        'member_id': resource_members.member_id,
-        'group_id': resource_members.group_id,
-        'user_id': resource_members.user_id,
-        'name': resource_user.name,
-        'email': resource_user.email,
-        'admin': resource_members.admin,
-        'total_posts': resource_members.total_posts,
-        'created_at': resource_members.created_at,
-        'updated_at': resource_members.updated_at,
-    }
+    check_object_availability(members_by_group, 'No posts were found.', 404)
 
-    return resource
+    for member in members_by_group:
+        if member['user_id'] == user_id:
+            return member
 
 
-@router.get("/", response_model=List[GetGroupMemberShort],)
+@router.get("/", response_model=List[GetGroupMemberShort_1],)
 def get_all_users_with_membership(
     db: Session = Depends(get_db),
     limit: Optional[int] = None,
@@ -86,7 +64,7 @@ def get_all_users_with_membership(
     search: Optional[str] = "",
     ):
 
-    db_session = DBSession(db, GroupMembers)
+    db_session = DBSessionGroupMembers(db)
 
     all_resources = db_session.all_resources(
         search_column='group_id',
@@ -100,25 +78,19 @@ def get_all_users_with_membership(
     return all_resources
 
 
-# @router.post(
-#     '/join/{group_id}',
-#     status_code=status.HTTP_201_CREATED,
-#     response_model=GetGroupMember,
-#     )
 @router.post(
     '/join/{group_id}',
     status_code=status.HTTP_201_CREATED,
     )
-def post_group_member(
+def join_group_member(
     group_id: int,
     db: Session = Depends(get_db),
     credentials_user: int = Depends(get_current_user),
     ):
 
-    # group_id = resource.group_id
     user_id = credentials_user.user_id
    
-    db_session = DBSession(db, GroupMembers)
+    db_session = DBSessionGroupMembers(db)
     
     dump = {'group_id': group_id, 'user_id': user_id}
 
@@ -128,15 +100,14 @@ def post_group_member(
     
     check_add_resource(lambda: db_session.add_resource(dump), 500) 
     
-    resource = db_session.fetch_last_created 
+    return Response(
+        status_code=status.HTTP_201_CREATED,
+        )
 
-    return resource
 
 
-
-# @router.delete("/{group_id}", status_code=status.HTTP_204_NO_CONTENT)
-@router.delete("/leave/{group_id}",)
-def delete_group_member(
+@router.delete("/leave/{group_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_membership(
     group_id: int,
     db: Session = Depends(get_db),
     credentials_user: int = Depends(get_current_user),
@@ -146,7 +117,7 @@ def delete_group_member(
     user_id = credentials_user.user_id
 
     # Check social group.
-    db_session_group = DBSession(db, GroupMembers)
+    db_session_group = DBSessionGroupMembers(db)
 
     current_group = db_session_group.fetch_resource(
         {'group_id': group_id,},
@@ -159,7 +130,7 @@ def delete_group_member(
         )
 
     # Check membership.
-    db_session_members = DBSession(db, GroupMembers)
+    db_session_members = DBSessionGroupMembers(db)
 
     user_id = credentials_user.user_id
 

@@ -7,20 +7,14 @@ from pydantic import (
     )
 
 
-class GetGroupMemberShort(BaseModel):
+class GetGroupMemberShort_1(BaseModel):
     member_id: int
     group_id: int
     user_id: int
     admin: bool
-    total_posts: Union[int, None]
 
-
-class GetGroupMember(GetGroupMemberShort):
-    created_at: datetime
-    updated_at: Union[datetime, None]
+class GetGroupMemberShort_2(BaseModel):
+    member_id: int
     name: str
-    email: EmailStr
-
-class PostGroupMember(BaseModel):
-    model_config = ConfigDict(extra='forbid',)
-    group_id: int
+    user_id: int
+    admin: bool

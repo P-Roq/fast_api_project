@@ -46,17 +46,14 @@ class Posts(Base):
     post_id = Column(Integer, primary_key=True, autoincrement=True, unique=True,)
     created_at = Column(DateTime, default=datetime.utcnow,)
     updated_at = Column(DateTime(timezone=True,), onupdate=func.now(), nullable=True)
-    # score = Column(Float,)
     view_count = Column(Integer,)
     title = Column(TEXT,)
-    # secret_number = Column(Integer, unique=True,)
     user_id = Column(
         Integer, 
         ForeignKey('users.user_id', ondelete='CASCADE', name='posts_users_f',),
         nullable=False,
         )
-    user_info = relationship('Users', uselist=False) # referencing the `Users` class
-    # votes_info = relationship('Votes', uselist=False) # referencing the `Votes` class
+    user_info = relationship('Users', uselist=False)
 
 
 class Votes(Base):
@@ -77,8 +74,6 @@ class Votes(Base):
     created_at = Column(DateTime, default=datetime.utcnow,)
     updated_at = Column(DateTime(timezone=True,), onupdate=func.now(), nullable=True)
 
-
-#-----------------------------------------------------------------------------------------------------------------------
 
 class SocialGroups(Base):
     __tablename__ = 'social_groups'
@@ -413,7 +408,7 @@ class DBSessionUsers(DBSession):
     def __init__(self, session_local, Table=Users,):
         super().__init__(session_local, Table)
 
-    def fetch_user_info(self, id_column: str, id_value: Union[str, int]) -> list:
+    def fetch_user_info(self, id_column: str, id_value: Any) -> list:
     
         identification_attribute = getattr(self.Table, id_column)
         find_user = identification_attribute == id_value
@@ -489,8 +484,7 @@ class DBSessionSocialGroups(DBSession):
                 filter_attributes.append(attribute_condition)
         
             filter_container = filter_container + filter_attributes
-        print('\n\n', 'print this:\n',)
-        print('\n\n', *filter_container, '\n\n',)
+
         all_resources = (
             self.SessionLocal
             .query(
@@ -542,13 +536,46 @@ class DBSessionSocialGroups(DBSession):
 
         social_groups_id = [resource.group_id for resource in social_groups_id]
 
-        print('\n\n', 'print this:\n',)
-        print('\n\n', social_groups_id, '\n\n',)
         
-
         return self.all_social_groups(
             filter_columns={'group_id': social_groups_id}
             )
     
 
 #--------------------------------------------------------------------------------------------------------------------
+
+@dataclass
+class DBSessionGroupMembers(DBSession):
+    def __init__(self, session_local, Table=GroupMembers,):
+        super().__init__(session_local, Table)
+
+
+    def get_all_members_by_group(self, id_column: str, id_value: Any) -> list:
+    
+        identification_attribute = getattr(self.Table, id_column)
+        find_group = identification_attribute == id_value
+
+        group_members = (
+            self.SessionLocal
+            .query(Users, GroupMembers)
+            .join(
+                self.Table, self.Table.user_id == Users.user_id,
+                isouter=False,
+                )
+            .filter(find_group)
+            .all()
+            )
+        
+        organized_results = []
+        
+        for row in group_members:
+            post_dict = {
+                "user_id": row[0].user_id,
+                "name": row[0].name,
+                "member_id": row[1].member_id,
+                "admin": row[1].admin,
+                }
+            
+            organized_results.append(post_dict)
+
+        return organized_results

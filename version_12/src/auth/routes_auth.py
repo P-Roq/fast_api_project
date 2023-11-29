@@ -39,7 +39,7 @@ def send_login_credentials(
 
     check_password(validate_pw(password, hashed_pw))
 
-    access_token = create_access_token(data = {"user_id": user_id}) # NOTICE: user ID embedded into the token.
+    access_token = create_access_token(data = {"user_id": user_id}) # user ID embedded into the token.
 
     check_add_resource(
         lambda: db_session.update_resource(id_column='user_id', id=user_id, dump={'last_login': datetime.utcnow()}),
