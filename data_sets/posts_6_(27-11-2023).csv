@@ -1,0 +1,207 @@
+"post_id";"created_at";"updated_at";"score";"view_count";"title";"user_id"
+1;"2019-09-17 00:00:00";"2023-11-27 17:35:37";8.0;6332;"unit test put post";28
+2;"2019-09-17 00:00:00";"2023-11-24 18:06:15";-2.0;39;"what serverless pattern is recommended when using many models?";67
+3;"2019-09-17 00:00:00";"2023-11-24 18:06:17";0.0;46;"SQL select s subtr value and the real value";14
+4;"2019-09-17 00:00:00";"2023-11-24 18:06:19";1.0;1828;"Load a large xlsx file from INPUT-STREAM throwing OutOfMemoryError Apache POI";58
+5;"2019-09-17 00:00:00";"2023-11-24 18:06:22";3.0;922;"How are fields initialized by the default constructor";41
+6;"2019-09-17 00:00:00";"2023-11-24 20:11:46";1.0;106;"Problem in SQL query(Expected output not coming)";54
+7;"2019-09-17 00:00:00";"2023-11-05 10:16:03";-2.0;460;"How to flatten this json as a tsv?";66
+8;"2019-09-17 00:00:00";"2023-11-05 10:16:03";-2.0;168;"Python regular expression to find the pattern exists in the given string";50
+9;"2019-09-17 00:00:00";"2023-11-05 10:16:03";0.0;49;"How to add a special-case row in a empty Spark DataFrame?";19
+10;"2019-09-17 00:00:00";"2023-11-05 10:16:04";0.0;33;"Trying to seperate a cell by letters followed by numbers";43
+11;"2019-09-17 00:00:00";"2023-11-05 10:16:04";3.0;1690;"phpdoc: PHP Warning: count(): Parameter must be an array or an object that implements Countable";63
+12;"2013-11-14 00:00:00";"2023-11-05 10:16:04";0.0;1406;"jquery prepend then animate div";66
+13;"2013-11-14 00:00:00";"2023-11-05 10:16:04";0.0;187;"Cant output to GUI, can output to console";34
+14;"2013-11-14 00:00:00";"2023-11-05 10:16:04";0.0;225;"How to prevent saving to database from trigger or stored procedure?";34
+15;"2013-11-14 00:00:00";"2023-11-05 10:16:05";5.0;448;"How can I automate the removal of XML Documentation Comments?";26
+16;"2013-11-14 00:00:00";"2023-11-05 10:16:05";2.0;3414;"Front-End Back-End communication iOS app";48
+17;"2013-11-14 00:00:00";"2023-11-05 10:16:05";0.0;79;"jfreechart different series color";70
+18;"2013-11-14 00:00:00";"2023-11-05 10:16:05";2.0;47;"What is the different deploy your web site under the Sites vs Default Web Site";40
+19;"2013-11-14 00:00:00";"2023-11-05 10:16:06";4.0;4001;"AppEngine Timeout with Task Queues";11
+20;"2013-11-14 00:00:00";"2023-11-05 10:16:06";1.0;748;"Gradle: How do I stop Jetty if JMeter test failed";23
+21;"2013-11-14 00:00:00";"2023-11-05 10:16:06";7.0;1308;"Mixing versions of the MSVCRT";28
+22;"2013-11-14 00:00:00";"2023-11-05 10:16:06";0.0;1593;"TNS listener could not find available handler with matching protocol stack?";53
+23;"2013-11-14 00:00:00";"2023-11-05 10:16:06";2.0;769;"Regex "",\s(.*?),\s""""""";40
+24;"2013-11-14 00:00:00";"2023-11-05 10:16:07";0.0;42;"Outline hovering effect issues on stacked divs";73
+25;"2013-11-14 00:00:00";"2023-11-05 10:16:07";1.0;1055;"CAS with SavedRequestAwareAuthenticationSuccessHandler no redirecting correctly";2
+26;"2013-11-14 00:00:00";"2023-11-05 10:16:07";4.0;594;"Python UnboundLocalError";12
+27;"2013-11-14 00:00:00";"2023-11-05 10:16:07";2.0;3337;"run a function or alias set in bashrc, or profile through nohup";72
+28;"2013-11-14 00:00:00";"2023-11-05 10:16:07";-1.0;166;"Feature computation in viola and jones";74
+29;"2013-11-14 00:00:00";"2023-11-05 10:16:08";-1.0;34;"How to connect this array to this output";2
+30;"2013-11-14 00:00:00";"2023-11-05 10:16:08";124.0;160740;"How to make a <button> in Bootstrap look like a normal link in nav-tabs?";21
+31;"2013-11-14 00:00:00";"2023-11-05 10:16:08";1.0;90;"Getstore to Buffer, not using temporary files";43
+32;"2013-11-14 00:00:00";"2023-11-05 10:16:08";1.0;924;"Using interstitials from Admob in a Libgdx game for Android, it""s slow when dismissing it""";33
+33;"2013-11-14 00:00:00";"2023-11-05 10:16:08";3.0;349;"How to give two different classes the same interface?";10
+34;"2013-11-14 00:00:00";"2023-11-05 10:16:09";6.0;22223;"Difference between putchar(), putch(), fputchar()?";55
+35;"2013-11-14 00:00:00";"2023-11-05 10:16:09";0.0;1957;"Removing padding from box-sizing adds width to div";34
+36;"2013-11-14 00:00:00";"2023-11-05 10:16:09";16.0;35320;"wpf xaml binding to object created in code behind";22
+37;"2013-11-14 00:00:00";"2023-11-10 12:11:45";3.0;892;"Trying to patch a post that does not belong to the leged in user.";1
+38;"2013-11-14 00:00:00";"2023-11-05 10:16:09";0.0;525;"Set GoogleMaps inside Fragment";9
+39;"2013-11-14 00:00:00";"2023-11-05 10:16:10";15.0;53226;"Adding a line break in the title attribute";12
+40;"2013-11-14 00:00:00";"2023-11-05 10:16:10";4.0;622;"how to confirm that netty has tried to read the socket";32
+41;"2013-11-14 00:00:00";"2023-11-05 10:16:10";0.0;2149;"Header file is not being read?";74
+42;"2013-11-14 00:00:00";"2023-11-05 10:16:10";1.0;328;"RSpec stubbing issue -- stub seems to be working but not being received";57
+43;"2013-11-14 00:00:00";"2023-11-05 10:16:10";1.0;2132;"How to check for file updates after 5 min intervals with autoit?";53
+44;"2013-11-14 00:00:00";"2023-11-05 10:16:11";6.0;885;"How to add comment in h:panelGrid without causing it to generate empty TD";1
+45;"2013-11-14 00:00:00";"2023-11-05 10:16:11";0.0;1176;"Unexpected end of input jQuery json";19
+46;"2013-11-14 00:00:00";"2023-11-05 10:16:11";2.0;1295;"ASP.NET MVC 4.0 Chrome Caching";27
+47;"2013-11-14 00:00:00";"2023-11-05 10:16:11";0.0;181;"How can I read ""property"""" file type in C + + (or Boost), like: language=""""en""""""";27
+48;"2013-11-14 00:00:00";"2023-11-05 10:16:11";2.0;5406;"Pixel Shader can access Structured Buffer while Vertex Shader can""t - is that a DirectX spec?""";50
+49;"2013-11-14 00:00:00";"2023-11-05 10:16:12";4.0;3647;"relative seek for io.StringIO in python3";58
+51;"2013-11-14 00:00:00";"2023-11-05 10:16:12";0.0;88;"Chosen field in active_admin";61
+52;"2013-11-14 00:00:00";"2023-11-05 10:16:12";1.0;248;"JOOQ mysql bitwise";54
+53;"2013-11-14 00:00:00";"2023-11-05 10:16:12";2.0;985;"How to handle user permissions in a database schema?";17
+54;"2013-11-14 00:00:00";"2023-11-05 10:16:13";-1.0;54;"Searching using inArray";51
+55;"2013-11-14 00:00:00";"2023-11-05 10:16:13";1.0;2413;"change legend title in ggbiplot";61
+56;"2013-11-14 00:00:00";"2023-11-05 10:16:13";2.0;292;"Pull-Over View in iOS 7 Similar to Control Center";2
+57;"2016-08-29 00:00:00";"2023-11-05 10:16:13";4.0;5127;"How to make ChartJS not cut off tooltips?";37
+58;"2016-08-29 00:00:00";"2023-11-05 10:16:13";1.0;1150;"CSS - box-shadow not appearing when using :before and z-index";8
+59;"2016-08-29 00:00:00";"2023-11-05 10:16:13";1.0;149;"The data alone is missing when I try to send from Angular.js to Node.js";14
+60;"2016-08-29 00:00:00";"2023-11-05 10:16:14";3.0;1040;"Using spring-boot Gradle plugin but getting spring boot version from dependency management";31
+61;"2016-08-29 00:00:00";"2023-11-05 10:16:14";1.0;1221;"SignalR with Azure causes Bad gateway error 502";63
+62;"2016-08-29 00:00:00";"2023-11-05 10:16:14";1.0;47;"Organise custom classes";46
+63;"2016-08-29 00:00:00";"2023-11-05 10:16:14";0.0;668;"OSX homebrew error when install gdb: """"""Uninitialized constant Homebrew::FormulaClassUnavailableError""""""";40
+64;"2016-08-29 00:00:00";"2023-11-05 10:16:15";0.0;235;"incorporating my html-css design into ruby on rails";60
+65;"2016-08-29 00:00:00";"2023-11-05 10:16:15";1.0;645;"Android 6 Samsung Touchwiz launcher icons are bigger than of non samsung apps";35
+66;"2016-08-29 00:00:00";"2023-11-05 10:16:15";-5.0;2677;"can i print a setter value (sysout) or do i have to use only getters in order to get an output ? (java)";71
+67;"2016-08-29 00:00:00";"2023-11-05 10:16:15";0.0;1204;"I cannot @include the views inside Bootstrap""s tab in Laravel 5.1""";27
+68;"2016-08-29 00:00:00";"2023-11-05 10:16:16";0.0;31;"Echo total in array codeigniter";33
+69;"2016-08-29 00:00:00";"2023-11-05 10:16:16";0.0;492;"I am not using freemarker for struts2, but I see lots of logging generated by freemarker";59
+70;"2016-08-29 00:00:00";"2023-11-05 10:16:16";0.0;197;"CouchDB Referential Integrity";46
+71;"2016-08-29 00:00:00";"2023-11-05 10:16:16";0.0;1739;"Canvas Restart On Button Click";56
+72;"2016-08-29 00:00:00";"2023-11-05 10:16:16";3.0;3042;"Animate Grid Background color";23
+73;"2016-08-29 00:00:00";"2023-11-05 10:16:17";-4.0;69;"Update Query not working. Always catch syntax is running";9
+74;"2016-08-29 00:00:00";"2023-11-05 10:16:17";1.0;42;"removeObject works, but addObject does not, both have the same parameters";52
+75;"2016-08-29 00:00:00";"2023-11-05 10:16:17";0.0;594;"Working with OfflineJS and AngularJS";65
+76;"2016-08-29 00:00:00";"2023-11-05 10:16:17";18.0;7035;"Using jQuery methods on event.target";37
+77;"2016-08-29 00:00:00";"2023-11-05 10:16:17";0.0;1045;"export multiple highcharts with text area for their highcharts to multiple PDF file";11
+78;"2016-08-29 00:00:00";"2023-11-05 10:16:18";1.0;65;"adding pictures to .JAR file";33
+79;"2016-08-29 00:00:00";"2023-11-05 10:16:18";1.0;40;"Why is ""Python --version"""" command streaming the output to stderr instead of stdout?""";30
+80;"2016-08-29 00:00:00";"2023-11-05 10:16:18";0.0;36;"Authenticate public-key which is coming from a database";27
+81;"2016-08-29 00:00:00";"2023-11-05 10:16:18";13.0;21706;"How to solve 403 error in scrapy";66
+82;"2016-08-29 00:00:00";"2023-11-05 10:16:18";0.0;3218;"Populating listbox from another listbox selection";70
+83;"2016-08-29 00:00:00";"2023-11-05 10:16:19";0.0;582;"The remote server returned an error: (500) Internal Server Error in mvc";45
+84;"2016-08-29 00:00:00";"2023-11-05 10:16:19";1.0;1852;"How to iterate through all files in IntelliJ plugin project?";35
+85;"2016-08-29 00:00:00";"2023-11-05 10:16:19";1.0;44;"Looping a column in a dataframe while changing its value";52
+86;"2016-08-29 00:00:00";"2023-11-05 10:16:19";0.0;2261;"ImageView/layout rounded circular in XML";14
+87;"2016-08-29 00:00:00";"2023-11-05 10:16:19";2.0;1228;"Is it possible to use Icons with css:before without hardcoding the code?";58
+88;"2016-08-29 00:00:00";"2023-11-05 10:16:20";0.0;71;"Label to display item in array in not visible";68
+89;"2016-08-29 00:00:00";"2023-11-05 10:16:20";8.0;6301;"NULL""react-native run-android"""" - BUILD is SUCCESSFUL but get error type 3 Error: Activity class MainActivity does not exist""";21
+90;"2016-08-29 00:00:00";"2023-11-05 10:16:20";0.0;139;"RequireHttps vs deriving from RequireHttpsAttribute";15
+91;"2013-11-14 00:00:00";"2023-11-05 10:16:20";1.0;124;"Set a group of <span>""s position based on the lowest <span> in a table jQuery""";3
+92;"2013-11-14 00:00:00";"2023-11-05 10:16:20";214.0;158522;"How do I add an existing Solution to GitHub from Visual Studio 2013";49
+93;"2013-11-14 00:00:00";"2023-11-05 10:16:21";0.0;95;"Nested Objects in Form Not Updating";13
+94;"2013-11-14 00:00:00";"2023-11-05 10:16:21";3.0;8695;"HTML Table Filter with Columns";33
+95;"2013-11-14 00:00:00";"2023-11-05 10:16:21";1.0;413;"Copy row to separate spreadsheet onEdit of column";70
+96;"2013-11-14 00:00:00";"2023-11-05 10:16:21";0.0;3416;"Why do I get a Fatal Error out of memory in Magento?";15
+97;"2013-11-14 00:00:00";"2023-11-05 10:16:21";0.0;429;"Cannot fill down formulae in table downloaded from ODBC";69
+98;"2013-11-14 00:00:00";"2023-11-05 10:16:22";1.0;2272;"How to Determine the large-arc-flag in Path Arc";57
+99;"2013-11-14 00:00:00";"2023-11-05 10:16:22";1.0;522;"Data modelling in MongoDB";8
+100;"2013-11-14 00:00:00";"2023-11-05 10:16:22";0.0;80;"How to allocate memory for an array of structs, then pass that array to a function, which populates the array in C";56
+101;"2013-11-14 00:00:00";"2023-11-05 10:16:22";2.0;336;"Perl splitting with leading and trailing delimiters";37
+103;"2013-11-14 00:00:00";"2023-11-05 10:16:23";5.0;754;"DataGrid WPF Virtualization and Command CanExecute";16
+104;"2013-11-14 00:00:00";"2023-11-05 10:16:23";3.0;4006;"Access-Control-Allow-Origin error while accessing BOSH in openfire";58
+105;"2013-11-14 00:00:00";"2023-11-05 10:16:23";1.0;3404;"Autostart html5 video on a Webview not working on Android 4.2.2";19
+106;"2013-11-14 00:00:00";"2023-11-05 10:16:23";0.0;139;"A beginners questions about PHP";43
+107;"2013-11-14 00:00:00";"2023-11-05 10:16:23";1.0;2081;"How to count of number of rows in Criteria Api";7
+108;"2013-11-14 00:00:00";"2023-11-05 10:16:23";0.0;527;"Select next record on datasheet subform from separate form?";65
+109;"2013-11-14 00:00:00";"2023-11-05 10:16:24";0.0;587;"CakePHP. Multiple Forms per page";16
+110;"2013-11-14 00:00:00";"2023-11-05 10:16:24";0.0;49;"Slow updates using LIKE on where";11
+111;"2013-11-14 00:00:00";"2023-11-05 10:16:24";0.0;1151;"How can I make the background of elements of my blog transparent in Blogger?";31
+112;"2013-11-14 00:00:00";"2023-11-05 10:16:24";0.0;53;"regexp replace between some slashes";3
+113;"2013-11-14 00:00:00";"2023-11-05 10:16:25";6.0;570;"Lazily partition sequence with LINQ";27
+114;"2013-11-14 00:00:00";"2023-11-05 10:16:25";1.0;424;"OSX Serial read freeze / hang";64
+115;"2013-11-14 00:00:00";"2023-11-05 10:16:25";0.0;415;"django south - stale user model when using AbstractUser";4
+116;"2013-11-14 00:00:00";"2023-11-05 10:16:25";0.0;106;"New build options for web ui on Dart 1.0";31
+117;"2013-11-14 00:00:00";"2023-11-05 10:16:25";-6.0;92;"Using string.replace()";34
+118;"2013-11-14 00:00:00";"2023-11-05 10:16:26";0.0;392;"Mathematica doesn""t work with big numbers""";44
+119;"2013-11-14 00:00:00";"2023-11-05 10:16:26";0.0;1353;"How to highlight a button in XAML using Triggers?";55
+120;"2013-11-14 00:00:00";"2023-11-05 10:16:26";0.0;60;"Why are some of my link titles are being placed outside of my <a> tags?";10
+121;"2013-11-14 00:00:00";"2023-11-05 10:16:26";0.0;1144;"Easy GUI way to add data to a Solr index";37
+122;"2013-11-14 00:00:00";"2023-11-05 10:16:26";1.0;187;"generate different exceptions from soap in c#";29
+123;"2013-11-14 00:00:00";"2023-11-05 10:16:27";0.0;36;"C++ SunOS ofstream error";42
+124;"2013-11-14 00:00:00";"2023-11-05 10:16:27";-3.0;694;"Inserting a variable into a list c#";6
+125;"2013-11-14 00:00:00";"2023-11-05 10:16:27";1.0;78;"Switching indexOf to inArray";43
+126;"2013-11-14 00:00:00";"2023-11-05 10:16:27";0.0;253;"can""t list taxonomies in meta box""";68
+127;"2013-11-14 00:00:00";"2023-11-05 10:16:27";0.0;109;"Dynamic Column Headings in SELECT statement";6
+128;"2013-11-14 00:00:00";"2023-11-05 10:16:28";-1.0;138;"Checking a number in String Variable";60
+129;"2013-11-14 00:00:00";"2023-11-05 10:16:28";1.0;4640;"Build image location in Crystal Report from report location";32
+130;"2013-11-14 00:00:00";"2023-11-05 10:16:28";1.0;93;"Accessing data in a set";68
+131;"2013-11-14 00:00:00";"2023-11-05 10:16:28";0.0;752;"Building wxWidgets 3.0.0 with nmake - directories created in wrong places";25
+132;"2013-11-14 00:00:00";"2023-11-05 10:16:28";0.0;271;"Populate bar graph from array with core plot";70
+133;"2019-09-17 00:00:00";"2023-11-05 10:16:29";1.0;46;"pass variable of javascript to php to the current page";51
+134;"2019-09-17 00:00:00";"2023-11-05 10:16:29";2.0;577;"Percentage difference between values in dictionary";56
+135;"2019-09-17 00:00:00";"2023-11-05 10:16:29";0.0;61;"Snapping in HorizontalScrollView inside Fragment";58
+136;"2019-09-17 00:00:00";"2023-11-05 10:16:29";1.0;3690;"How to implement an alert dialog in androidX";71
+137;"2019-09-17 00:00:00";"2023-11-05 10:16:30";0.0;337;"How to set size for each element in Row as the smallest element? (reverse IntrinsicWidth or IntrinsicHeight)";37
+138;"2019-09-17 00:00:00";"2023-11-05 10:16:30";0.0;872;"CSV.writer each set entry on a new line";1
+139;"2019-09-17 00:00:00";"2023-11-05 10:16:30";2.0;102;"Solr Facet , how exclude only main query?";4
+140;"2019-09-17 00:00:00";"2023-11-05 10:16:30";0.0;322;"Get data from socket connection without sending it again";29
+141;"2019-09-17 00:00:00";"2023-11-05 10:16:30";0.0;662;"setting up a development environment for Linux device driver";18
+142;"2019-09-17 00:00:00";"2023-11-05 10:16:31";2.0;1746;"AWS SQS BackUp Solution Design";38
+143;"2019-09-17 00:00:00";"2023-11-05 10:16:31";0.0;479;"Creating list of cards of same height with flexbox";26
+144;"2019-09-17 00:00:00";"2023-11-05 10:16:31";0.0;171;"Stale Element Exception, Element not Clickable,Element Click Intercepted & No Such Element error displayed Alternately by same element";31
+145;"2019-09-17 00:00:00";"2023-11-05 10:16:31";0.0;107;"How do I download the HTML code of the url with the images NOT being hidden";31
+146;"2019-09-17 00:00:00";"2023-11-05 10:16:32";7.0;2150;"CPU acceleration status: This user doesn""t have permissions to use KVM (/dev/kvm) in docker""";67
+147;"2019-09-17 00:00:00";"2023-11-05 10:16:32";1.0;469;"Laravel - How to load a hasone relation on a hasmany relation";35
+148;"2019-09-17 00:00:00";"2023-11-05 10:16:32";1.0;1480;"Can I use HQL with JPA""s @Query annotation?""";58
+149;"2019-09-17 00:00:00";"2023-11-05 10:16:32";1.0;1521;"Kendo DropDownList with Nested Object as TextField";72
+150;"2019-09-17 00:00:00";"2023-11-05 10:16:32";0.0;78;"How to change colors of Pie Chart slices in MVC(Razor HTML)?";65
+151;"2019-09-17 00:00:00";"2023-11-05 10:16:32";1.0;359;"Cassandra Best Practice for Deleting Large Amounts of Rows";54
+152;"2019-09-17 00:00:00";"2023-11-05 10:16:33";0.0;536;"Conflicting versions of celery and kombu while installing airflow";13
+153;"2019-09-17 00:00:00";"2023-11-05 10:16:33";-1.0;498;"VBA IF SUM Function";55
+154;"2019-09-17 00:00:00";"2023-11-05 10:16:33";0.0;184;"How to obtain onComplete with Room Flowable<List<Item>>?";73
+155;"2019-09-17 00:00:00";"2023-11-05 10:16:34";1.0;247;"Android Instant App StartActivityForResult";54
+156;"2019-09-17 00:00:00";"2023-11-05 10:16:34";1.0;97;"Alternating Cycle (T)op/(B)ottom Sequence";59
+157;"2019-09-17 00:00:00";"2023-11-05 10:16:34";1.0;109;"Have Gravity Form inputs show on different modals";23
+158;"2019-09-17 00:00:00";"2023-11-05 10:16:34";0.0;142;"Python snippet to manage regex replacement index map?";4
+159;"2019-09-17 00:00:00";"2023-11-05 10:16:35";0.0;552;"Cassandra count query throwing ReadFailureException";24
+160;"2019-09-17 00:00:00";"2023-11-05 10:16:35";0.0;26;"Need to iterate through array to capture all rows - currently only saving the number in the [0] or first record";51
+161;"2019-09-17 00:00:00";"2023-11-05 10:16:35";0.0;1015;"How to share excel workbook with python?";7
+162;"2019-09-17 00:00:00";"2023-11-05 10:16:35";0.0;262;"Sitemesh3 Decorator only works with JSP extension";73
+163;"2019-09-17 00:00:00";"2023-11-05 10:16:36";0.0;60;"How to do custom settings in s3 to show folder to some users";8
+164;"2019-09-17 00:00:00";"2023-11-05 10:16:36";0.0;146;"How to run command line in c";39
+165;"2019-09-17 00:00:00";"2023-11-05 10:16:36";1.0;311;"Replace XML-element with LINQ to XML";8
+166;"2019-09-17 00:00:00";"2023-11-05 10:16:36";1.0;881;"Hide/Unhide merged cells in excel";35
+167;"2019-09-17 00:00:00";"2023-11-05 10:16:36";0.0;98;"Missing ""Progress Report"""" option under Test Plans""";47
+168;"2019-09-17 00:00:00";"2023-11-05 10:16:37";11.0;27940;"Passing parameters to Laravel job is not working";10
+169;"2019-09-17 00:00:00";"2023-11-05 10:16:37";1.0;31;"How to dump an object that is a child of a class (knowing that class casting is impossible in Python)?";44
+170;"2019-09-17 00:00:00";"2023-11-05 10:16:37";1.0;70;"Multiple plots in repeated question yields ""Error in exm[[dups[j]]] : subscript out of bounds""""""";28
+171;"2019-09-17 00:00:00";"2023-11-05 10:16:37";2.0;13544;"Trim String/Text in Flutter";71
+172;"2019-09-17 00:00:00";"2023-11-05 10:16:37";1.0;160;"Where does this space comes from? CSS";47
+173;"2009-02-17 00:00:00";"2023-11-05 10:16:37";4.0;91008;"Updating database records in a loop?";1
+174;"2009-02-17 00:00:00";"2023-11-05 10:16:38";0.0;4749;"PHP Time after midnight problem";62
+175;"2009-02-17 00:00:00";"2023-11-05 10:16:38";4.0;280;"How to achieve the below with Git?";17
+176;"2009-02-17 00:00:00";"2023-11-05 10:16:38";1.0;798;"How do I authenticate for Twitter friends_timeline?";30
+177;"2009-02-17 00:00:00";"2023-11-05 10:16:38";0.0;267;"SharePoint 2007: Single Sign-on Anomaly";52
+178;"2009-02-17 00:00:00";"2023-11-05 10:16:38";7.0;1148;"ServiceContainer, IoC, and disposable objects";20
+179;"2009-02-17 00:00:00";"2023-11-05 10:16:39";0.0;1148;"Looking for Object-Oriented Programming journal";2
+180;"2009-02-17 00:00:00";"2023-11-05 10:16:39";23.0;5377;"Can I pretty-print the DBIC_TRACE output in DBIx::Class?";26
+181;"2009-02-17 00:00:00";"2023-11-05 10:16:39";6.0;3665;"Silverlight Grid Splitter Unexpected Behaviour";24
+182;"2009-02-17 00:00:00";"2023-11-05 10:16:39";2.0;5976;"Equation of a helix parametrized by arc length between two points in space";24
+183;"2009-02-17 00:00:00";"2023-11-05 10:16:39";0.0;1497;"I have RTRIM; how to make LTRIM with regexp";42
+184;"2009-02-17 00:00:00";"2023-11-05 10:16:40";2.0;4432;"How can I send local Email by using exchange with asp.net?";69
+185;"2009-02-17 00:00:00";"2023-11-05 10:16:40";0.0;1719;"Encode dataview value in ASP.NET MVC Actionlink";53
+186;"2009-02-17 00:00:00";"2023-11-05 10:16:40";0.0;296;"Deadlocking lock() method";61
+187;"2009-02-17 00:00:00";"2023-11-05 10:16:40";3.0;399;"Making the leap from Java to C++";25
+188;"2009-02-17 00:00:00";"2023-11-05 10:16:40";-6.0;457;"how to load website (google, yahoo, any site) to canvas";35
+190;"2023-10-19 00:00:00";"2023-11-05 10:16:40";1650.0;988;"test PATCH once again and again!";43
+191;"2023-10-19 00:00:00";"2023-11-05 10:16:41";1650.0;988;"Test unique secret number.";70
+192;"2023-10-23 00:00:00";"2023-11-05 10:16:41";9.0;234;"Tets POST after version 7 changes.";28
+193;"2023-10-23 00:00:00";"2023-11-05 10:16:41";6.0;457;"Tets score limits.";64
+194;"2023-10-24 00:00:00";"2023-11-05 10:16:41";6.0;16;"Test repeated secret number";49
+195;"2023-10-24 00:00:00";"2023-11-05 10:16:41";5.6;16116;"Check Post after adding resource count to DB_Session 2";12
+196;"2023-10-31 00:00:00";"2023-11-05 10:16:42";1.6;651;"Testing PUT request after token authorization implementation 2.";42
+198;"2023-10-31 00:00:00";"2023-11-05 10:16:42";5.6;16116;"I'm tired of this shit - checking add resource 4";52
+199;"2023-10-31 00:00:00";"";5.6;16116;"I'm tired of this shit - checking add resource 4";3
+200;"2023-10-31 00:00:00";"";5.6;16116;"I'm tired of this shit - checking add resource 5";9
+206;"2023-11-06 11:48:26";"";9.0;10;"User ID automatic insert.";3
+207;"2023-11-06 11:49:51";"";9.0;10;"User ID automatic insert.";3
+209;"2023-11-17 20:39:43";"";1.0;1;"unit test post post via postman";28
+210;"2023-11-17 20:47:21";"";1.0;1;"unit test post post";28
+212;"2023-11-18 10:51:50";"2023-11-18 11:33:41";2.0;1000;"unit test put post with postman";28
+215;"2023-11-18 11:29:23";"";1.0;1;"unit test post post";28
+216;"2023-11-18 11:32:45";"";1.0;1;"unit test post post";28
+217;"2023-11-18 11:35:35";"";1.0;1;"unit test post post";28
+218;"2023-11-18 11:36:36";"";1.0;1;"unit test post post";28
+219;"2023-11-18 11:37:38";"";1.0;1;"unit test post post";28
