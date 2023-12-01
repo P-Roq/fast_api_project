@@ -2,7 +2,7 @@
 name = "fast-api-project"
 version = "0.1.0"
 description = ""
-authors = ["P-Roq" <proq@mymailproq.com>]
+authors = ["P-Roq"]
 readme = "README.md"
 packages = [{include = "fast_api_project"}]
 
@@ -21,6 +21,7 @@ python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 alembic = "^1.12.1"
 pytest = "^7.4.3"
 pymysql = "^1.1.0"
+executing = "2.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
