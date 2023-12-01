@@ -2,7 +2,7 @@
 name = "fast-api-project"
 version = "0.1.0"
 description = ""
-authors = ["P-Roq"]
+authors = ["P-Roq" <proq@mymailproq.com>]
 readme = "README.md"
 packages = [{include = "fast_api_project"}]
 

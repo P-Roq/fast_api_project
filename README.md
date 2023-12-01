@@ -79,8 +79,8 @@ The data for these tables has been generated through multiples sources:
 Support platforms for the project:
 
 - Install [poetry](https://python-poetry.org/) to isolate the required dependencies into a virtual environment (requirements.txt also available).
-- Install [MySQL](https://dev.mysql.com/downloads/mysql/)
-- Use [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) to create a MySQL server create and access the project's database. 
+- Install [MySQL](https://dev.mysql.com/downloads/mysql/)to create a MySQL server and the project's database.
+- [Optional] Install [MySQL Workbench](https://dev.mysql.com/downloads/workbench/) for an easier access to the database. 
 - Experiment and test the app with [Postman](https://www.postman.com/downloads/).
 
 ### Installation
@@ -90,9 +90,9 @@ Support platforms for the project:
         cd [project_directory]
         poetry install
 
-- Install MySQL
+- Install MySQL and set up the database.
 
-- Create a MySQL server via CLI or MySQL Workbench UI by setting (these are the same values that must be set in the .env file, to the exception of the 'Connection Name'):
+- [Optional] Create a connection to MySQL Workbench UI by setting (these are the same values that must be set in the .env file, to the exception of the connection name and method):
     - Connection Name
     - Connection Method
     - Hostname
@@ -101,8 +101,9 @@ Support platforms for the project:
     - Password
     - Default Schema
 
-Importing the database:
-- Create an empty schema (or use the default schema) in to fill it SQL dump.
+#### Importing the database:
+
+- Create a new schema (or use the default schema).
 
 - Run the following command (inside the main project folder)
     
@@ -110,16 +111,16 @@ Importing the database:
 
 Alternative, import just he database schema without data, using Alembic:
 
-    $ cd version_12
+    $ cd app
     $ alembic upgrade head
 
-The database tables can be imported one by one using the backups in the 'data_sets' folder.
+The database tables can be imported one by one using the CSV backup files in the 'data_sets' folder.
 
 ### Configuration
 
 #### Setting the environment variables
 
-Env file environmental variables are set and validated via Pydantic in 'version_12/src/env_models_12.py'. `config_path` is an environment variable with the path to the folder containing the project .env file; `dotenv_path` is the full path for the .env file. Variables that must be set:
+Env file environmental variables are set and validated via Pydantic in 'app/src/env_models.py'. `config_path` is an environment variable with the path to the folder containing the project .env file; `dotenv_path` is the full path for the .env file. Variables that must be set:
 
 For database connection:
 
