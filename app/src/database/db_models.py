@@ -413,28 +413,48 @@ class DBSessionUsers(DBSession):
         identification_attribute = getattr(self.Table, id_column)
         find_user = identification_attribute == id_value
 
-        user_info = (
-            self.SessionLocal
-            .query(self.Table, func.count(Posts.post_id).label('posts'))
-            .join(
-                self.Table, self.Table.user_id == Posts.user_id,
-                isouter=True,
+        try:
+            # If the user has no posts this query will return a null value.
+            user_info = (
+                self.SessionLocal
+                .query(self.Table, func.count(Posts.post_id).label('posts'))
+                .join(
+                    self.Table, self.Table.user_id == Posts.user_id,
+                    isouter=True,
+                    )
+                .group_by(Posts.user_id)
+                .filter(find_user)
+                .first()
                 )
-            .group_by(Posts.user_id)
-            .filter(find_user)
-            .first()
-            )
-        
-        organized_results = {
-                'user_id': user_info[0].user_id,
-                'name': user_info[0].name,
-                'email': user_info[0].email,
-                'posts': user_info[1] ,
-                'created_at': user_info[0].created_at,
-                'updated_at': user_info[0].updated_at,
-                'last_login': user_info[0].last_login,
-            }
-        
+
+            organized_results = {
+                    'user_id': user_info[0].user_id,
+                    'name': user_info[0].name,
+                    'email': user_info[0].email,
+                    'posts': user_info[1],
+                    'created_at': user_info[0].created_at,
+                    'updated_at': user_info[0].updated_at,
+                    'last_login': user_info[0].last_login,
+                }
+
+        except:
+            user_info = (
+                self.SessionLocal
+                .query(self.Table,)
+                .filter(find_user)
+                .first()
+                )
+
+            organized_results = {
+                    'user_id': user_info.user_id,
+                    'name': user_info.name,
+                    'email': user_info.email,
+                    'posts': 0,
+                    'created_at': user_info.created_at,
+                    'updated_at': user_info.updated_at,
+                    'last_login': user_info.last_login,
+                }
+
         return organized_results
 
 

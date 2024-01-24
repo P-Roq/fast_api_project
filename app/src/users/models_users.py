@@ -23,7 +23,7 @@ class PostUser(UserBase):
     model_config = ConfigDict(extra='forbid')
     name:str
     email: EmailStr 
-    # password: str
+    password: str
 
 
 class PatchUser(BaseModel):
